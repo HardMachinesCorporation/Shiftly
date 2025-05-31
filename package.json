@@ -1,7 +1,8 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,7 +12,10 @@
     "prepare": "husky",
     "cz": "cz",
     "lint": "eslint .",
-    "lint:fix": "eslint . --ext .js,.ts,.vue --fix"
+    "lint:fix": "eslint . --ext .js,.ts,.vue --fix",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "dependencies": {
     "@nuxt/eslint": "1.4.1",
@@ -26,13 +30,16 @@
     "vue": "^3.5.15",
     "vue-router": "^4.5.1"
   },
-  "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "@antfu/eslint-config": "^4.13.2",
     "commitizen": "^4.3.1",
     "cz-git": "^1.11.1",
     "daisyui": "^5.0.43",
+    "eslint-plugin-format": "^1.0.1",
+    "eslint-plugin-perfectionist": "^4.13.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
+    "standard-version": "^9.5.0",
     "typescript": "^5.8.3"
   },
   "lint-staged": {
