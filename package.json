@@ -9,7 +9,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky",
-    "cz": "cz"
+    "cz": "cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --ext .js,.ts,.vue --fix"
   },
   "dependencies": {
     "@nuxt/eslint": "1.4.1",
