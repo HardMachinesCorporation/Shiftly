@@ -7,7 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky",
+    "cz": "cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --ext .js,.ts,.vue --fix"
   },
   "dependencies": {
     "@nuxt/eslint": "1.4.1",
@@ -24,7 +28,19 @@
   },
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.11.1",
     "daisyui": "^5.0.43",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
     "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "**/*.{ts,js,vue,json,md}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
   }
 }
