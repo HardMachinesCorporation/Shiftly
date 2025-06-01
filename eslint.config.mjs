@@ -34,7 +34,10 @@ export default withNuxt(antfu({
     }],
 
     'unicorn/filename-case': ['error', {
-      case: 'kebabCase',
+      cases: {
+        kebabCase: true,
+        pascalCase: true,
+      },
       ignore: ['README.md'],
     }],
   },
