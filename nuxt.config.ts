@@ -11,7 +11,11 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/ui',
     '@nuxtjs/color-mode',
+    '@nuxt/image',
   ],
+  image: {
+    format: ['webp', 'png'],
+  },
   eslint: {
     config: {
       standalone: false,

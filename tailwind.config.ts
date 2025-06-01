@@ -13,6 +13,7 @@ const config: Config = {
         primary: '#F11A7B',
         secondary: '#982176',
         accent: '#3E001F',
+        wine: '#3E001F',
         soft: '#FFE5AD',
         // Optionnel : variantes nommées
         shiftly: {
